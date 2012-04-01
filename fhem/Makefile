@@ -19,6 +19,7 @@ endef
 define Package/fhem/Description 
     Fhem is a GPL'd perl server for house automation. 
     It is used to automate some common tasks in the household like switching lamps / shutters / heating / etc. and to log events like temperature/humidity/power consumption. The program runs as a server, you can control it via web-frontends, telnet, command line program or TCP/IP directly.
+    original makefile from: http://samtrac.informatik.hu-berlin.de/seismo-openwrt/
 endef 
 
 #define Build/Compile    

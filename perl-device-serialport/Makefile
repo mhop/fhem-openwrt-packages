@@ -23,6 +23,11 @@ TITLE:=A module that enables access to the serial port
 DEPENDS:=perl
 endef
 
+define Package/perl-device-serialport/description
+  A module that enables access to the serial port
+  This makefile was originally stolen from http://samtrac.informatik.hu-berlin.de/seismo-openwrt/
+endef
+
 define Build/Configure
         $(call perlmod/Configure,-n,)
 endef
