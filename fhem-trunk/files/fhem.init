@@ -1,0 +1,13 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+STOP=10
+
+start() {
+	perl /usr/bin/fhem.pl /etc/fhem.cfg &
+}
+
+stop() {
+	perl /usr/bin/fhem.pl 7072 "shutdown"
+}
+
