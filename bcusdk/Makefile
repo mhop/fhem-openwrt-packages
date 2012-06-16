@@ -1,5 +1,5 @@
 # Makefile
-### #include <cstdlib> in eibd/usb/usb.h 
+### #include <cstdlib> in eibd/usb/usb.h
 ### python pascal in eibd/clients/makefile.am entfernen
 
 
@@ -23,7 +23,7 @@ define Package/eibd
 	CATEGORY:=Network
 	TITLE:=Eib KNX deamon
 	URL:=http://www.auto.tuwien.ac.at/~mkoegler/index.php/eibd
-	DEPENDS:=pthsem
+	DEPENDS:=+pthsem +eibd-utils +libstdcpp
 endef
 
 define Package/eibd/description
@@ -35,7 +35,7 @@ define Package/eibd-utils
 	CATEGORY:=Network
 	TITLE:=Eib KNX Utils
 	URL:=http://www.auto.tuwien.ac.at/~mkoegler/index.php/eibd
-	DEPENDS:=pthsem
+	DEPENDS:=+pthsem +libstdcpp
 endef
 
 define Package/eibd-utils/description
@@ -66,11 +66,10 @@ endef
 define Build/Compile
 	$(MAKE) -C $(PKG_BUILD_DIR) \
 		CC=$(TARGET_CC) \
-		LIBS="-L$(STAGING_DIR)/usr/lib -fno-builtin -nostdinc++ -nodefaultlibs -lstdc++ -lc -lm -lgcc -largp -lpthsem " \
+		LIBS="-L$(STAGING_DIR)/usr/lib -fno-builtin -nostdinc++ -nodefaultlibs -lc -lm -lgcc -lstdc++ -largp -lpthsem " \
 		CPPFLAGS="-I$(STAGING_DIR)/include -I$(STAGING_DIR)/usr/include"
-		# -I$(LINUX_DIR)/include"
-
 endef
+		# -I$(LINUX_DIR)/include"
 
 define Package/eibd/install
 	mkdir -p $(1)/usr/bin
