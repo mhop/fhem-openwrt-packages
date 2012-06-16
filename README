@@ -7,6 +7,8 @@ perl-weather : needed for 59_Weather.pl
 fhem : Version 5.2 - stolen from http://samtrac.informatik.hu-berlin.de/seismo-openwrt/
 fhem-trunk : uses Source from my git-mirror of trunk
 fhem-enocean : uses Source from my enocean-branch on github
+eibd : The eibd daemon provides an interface to the EIB / KNX bus - from http://www.truniger.ch/openwrt/eibd-feed.tar.gz
+linknx : from http://www.truniger.ch/openwrt/eibd-feed.tar.gz
 
 Binaries for ar71xx are available from my Dropbox.
 Simply add 'src/gz fhem http://dl.dropbox.com/u/56112944/ipk/ar71xx/'
