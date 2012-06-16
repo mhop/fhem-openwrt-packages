@@ -20,7 +20,7 @@ define Package/linknx
   CATEGORY:=Network
   TITLE:=KNX home automation platform
   URL:=http://www.ouaye.net/linknx
-  DEPENDS:=pthsem +lua +luac
+  DEPENDS:=pthsem +lua +luac +libopenssl +libcurl +zlib +libstdcpp
 endef
 
 define Build/Configure
