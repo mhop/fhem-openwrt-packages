@@ -13,7 +13,7 @@ define Package/fhem
   TITLE:=Fhem is a GPL'd perl server for house automation.
   MAINTAINER:=Philipp Strobel
   URL:=http://fhem.de/fhem.html
-  DEPENDS:=+perl +perlbase-autoloader +perlbase-config +perlbase-dynaloader +perlbase-errno +perlbase-essential +perlbase-fcntl +perlbase-io +perlbase-math +perlbase-posix +perlbase-selectsaver +perlbase-socket +perlbase-symbol +perlbase-tie +perlbase-time +perlbase-xsloader +perlbase-file +perlbase-bytes +perlbase-compress +perlbase-list +perlbase-scalar +perlbase-utf8 +perl-device-serialport +kmod-usb-acm
+  DEPENDS:=+perl +perlbase-autoloader +perlbase-config +perlbase-dynaloader +perlbase-errno +perlbase-essential +perlbase-fcntl +perlbase-io +perlbase-math +perlbase-posix +perlbase-selectsaver +perlbase-socket +perlbase-symbol +perlbase-tie +perlbase-time +perlbase-xsloader +perlbase-file +perlbase-bytes +perlbase-compress +perlbase-list +perlbase-scalar +perlbase-utf8 +perl-device-serialport +kmod-usb-acm +perl-weather
 endef
 
 define Package/fhem/Description 
